@@ -17,6 +17,7 @@
 		2E8BC49627FB6CDC000E578E /* statesMAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8BC49527FB6CDC000E578E /* statesMAD.swift */; };
 		2E8BC49827FB7834000E578E /* apiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8BC49727FB7834000E578E /* apiService.swift */; };
 		2E8BC49A27FB9177000E578E /* StateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8BC49927FB9177000E578E /* StateViewModel.swift */; };
+		2E8BC49C27FBA31A000E578E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8BC49B27FBA31A000E578E /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		2E8BC49527FB6CDC000E578E /* statesMAD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statesMAD.swift; sourceTree = "<group>"; };
 		2E8BC49727FB7834000E578E /* apiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiService.swift; sourceTree = "<group>"; };
 		2E8BC49927FB9177000E578E /* StateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewModel.swift; sourceTree = "<group>"; };
+		2E8BC49B27FBA31A000E578E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				2E8BC49727FB7834000E578E /* apiService.swift */,
 				2E8BC49927FB9177000E578E /* StateViewModel.swift */,
 				2E8BC49527FB6CDC000E578E /* statesMAD.swift */,
+				2E8BC49B27FBA31A000E578E /* TableViewController.swift */,
 				2E8BC48227FB6AD6000E578E /* ViewController.swift */,
 				2E8BC48427FB6AD6000E578E /* Main.storyboard */,
 				2E8BC48A27FB6ADC000E578E /* Assets.xcassets */,
@@ -153,6 +156,7 @@
 				2E8BC49827FB7834000E578E /* apiService.swift in Sources */,
 				2E8BC48327FB6AD6000E578E /* ViewController.swift in Sources */,
 				2E8BC47F27FB6AD6000E578E /* AppDelegate.swift in Sources */,
+				2E8BC49C27FBA31A000E578E /* TableViewController.swift in Sources */,
 				2E8BC49627FB6CDC000E578E /* statesMAD.swift in Sources */,
 				2E8BC48927FB6AD6000E578E /* MAD_Ind04_Maples_Jordan.xcdatamodeld in Sources */,
 				2E8BC48127FB6AD6000E578E /* SceneDelegate.swift in Sources */,

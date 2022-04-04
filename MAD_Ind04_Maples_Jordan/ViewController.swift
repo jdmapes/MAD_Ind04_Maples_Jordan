@@ -8,23 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    var stateView = StateViewModel()
-    var apiService = ApiService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        apiService.getStateInfo { (result) in
-            print(result)
         }
     }
     
-    // MARK: - Table view data source
-
-    
-    
-
-}
+   
 
