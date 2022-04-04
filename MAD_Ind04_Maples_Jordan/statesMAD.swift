@@ -20,7 +20,7 @@ struct States: Decodable {
     let nickname: String?
     
     private enum Keys: String, CodingKey {
-        case state = "states"
+        case state = "state"
         case nickname = "nickname"
     }
 }

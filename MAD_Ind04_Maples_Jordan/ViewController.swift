@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var stateView = StateViewModel()
     var apiService = ApiService()
 
     override func viewDidLoad() {
@@ -19,7 +20,11 @@ class ViewController: UIViewController {
             print(result)
         }
     }
+    
+    // MARK: - Table view data source
 
+    
+    
 
 }
 
