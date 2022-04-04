@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2E8BC47F27FB6AD6000E578E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8BC47E27FB6AD6000E578E /* AppDelegate.swift */; };
 		2E8BC48127FB6AD6000E578E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8BC48027FB6AD6000E578E /* SceneDelegate.swift */; };
-		2E8BC48327FB6AD6000E578E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8BC48227FB6AD6000E578E /* ViewController.swift */; };
 		2E8BC48627FB6AD6000E578E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E8BC48427FB6AD6000E578E /* Main.storyboard */; };
 		2E8BC48927FB6AD6000E578E /* MAD_Ind04_Maples_Jordan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E8BC48727FB6AD6000E578E /* MAD_Ind04_Maples_Jordan.xcdatamodeld */; };
 		2E8BC48B27FB6ADC000E578E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8BC48A27FB6ADC000E578E /* Assets.xcassets */; };
@@ -24,7 +23,6 @@
 		2E8BC47B27FB6AD6000E578E /* MAD_Ind04_Maples_Jordan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAD_Ind04_Maples_Jordan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E8BC47E27FB6AD6000E578E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E8BC48027FB6AD6000E578E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2E8BC48227FB6AD6000E578E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2E8BC48527FB6AD6000E578E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E8BC48827FB6AD6000E578E /* MAD_Ind04_Maples_Jordan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MAD_Ind04_Maples_Jordan.xcdatamodel; sourceTree = "<group>"; };
 		2E8BC48A27FB6ADC000E578E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 				2E8BC48C27FB6ADC000E578E /* LaunchScreen.storyboard */,
 				2E8BC48F27FB6ADC000E578E /* Info.plist */,
 				2E8BC48727FB6AD6000E578E /* MAD_Ind04_Maples_Jordan.xcdatamodeld */,
-				2E8BC48227FB6AD6000E578E /* ViewController.swift */,
 				2E8BC48027FB6AD6000E578E /* SceneDelegate.swift */,
 				2E8BC47E27FB6AD6000E578E /* AppDelegate.swift */,
 			);
@@ -154,7 +151,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E8BC49827FB7834000E578E /* apiService.swift in Sources */,
-				2E8BC48327FB6AD6000E578E /* ViewController.swift in Sources */,
 				2E8BC47F27FB6AD6000E578E /* AppDelegate.swift in Sources */,
 				2E8BC49C27FBA31A000E578E /* TableViewController.swift in Sources */,
 				2E8BC49627FB6CDC000E578E /* statesMAD.swift in Sources */,

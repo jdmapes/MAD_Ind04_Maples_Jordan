@@ -9,8 +9,6 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    @IBOutlet weak var tableCell: UITableViewCell!
-    
     @IBOutlet var tableViewController: UITableView!
     
     var stateView = StateViewModel()
