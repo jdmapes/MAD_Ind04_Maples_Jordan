@@ -47,6 +47,10 @@
                             <outlet property="delegate" destination="QJA-0q-jgD" id="1Ba-la-GSS"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="tableCell" destination="13Z-S6-4Gg" id="ak1-0W-8b2"/>
+                        <outlet property="tableViewController" destination="Bk1-yt-wie" id="pCY-yn-kta"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUK-MH-FV9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

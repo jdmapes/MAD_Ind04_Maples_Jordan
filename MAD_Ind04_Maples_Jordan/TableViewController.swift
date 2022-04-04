@@ -9,6 +9,10 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
+    @IBOutlet weak var tableCell: UITableViewCell!
+    
+    @IBOutlet var tableViewController: UITableView!
+    
     var stateView = StateViewModel()
     var apiService = ApiService()
     
@@ -26,30 +30,33 @@ class TableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 50
+        return stateView.numberOfRowsInSection(section: section)
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "My Table Cell", for: indexPath)
         cell.backgroundColor = UIColor(red: 1.0, green: 0.5, blue: 0, alpha: 1.0)
 
         // Grab data for the cell from the tuple
-        let cellData = stateView
+        let cellData = stateView.cellForRowAt(indexPath: indexPath)
         
         // Configure the cell...
-        cell.textLabel?.text = state
-        cell.detailTextLabel?.text = nickname
+        cell.textLabel?.text = cellData.state
+        cell.detailTextLabel?.text = cellData.nickname
+        
+//        cell.textLabel?.text = StatesResult.init(states: [String])
+//        cell.detailTextLabel?.text = States.nickname
 
         return cell
     }
-
+        
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -96,3 +103,8 @@ class TableViewController: UITableViewController {
     */
 
 }
+    
+    
+}
+
+

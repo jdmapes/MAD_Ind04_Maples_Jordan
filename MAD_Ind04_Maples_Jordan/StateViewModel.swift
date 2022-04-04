@@ -25,7 +25,7 @@ class StateViewModel {
         }
     }
     
-    func numberOfRowsInSection(sectin: Int) -> Int {
+    func numberOfRowsInSection(section: Int) -> Int {
         if statesListInfo.count != 0 {
             return statesListInfo.count
         }
