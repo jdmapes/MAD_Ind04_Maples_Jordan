@@ -28,23 +28,27 @@ class TableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 50
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "My Table Cell", for: indexPath)
+        cell.backgroundColor = UIColor(red: 1.0, green: 0.5, blue: 0, alpha: 1.0)
 
+        // Grab data for the cell from the tuple
+        let cellData = stateView
+        
         // Configure the cell...
+        cell.textLabel?.text = state
+        cell.detailTextLabel?.text = nickname
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
