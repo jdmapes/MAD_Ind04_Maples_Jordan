@@ -8,14 +8,14 @@
 import Foundation
 
 struct StatesResult: Decodable {
-    let states: [Result]
+    let states: [States]
     
     private enum Keys: String, CodingKey {
         case states = "states"
     }
 }
 
-struct Result: Decodable {
+struct States: Decodable {
     let state: String?
     let nickname: String?
     
