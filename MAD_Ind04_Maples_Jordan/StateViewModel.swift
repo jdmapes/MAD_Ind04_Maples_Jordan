@@ -12,8 +12,7 @@ class StateViewModel {
     private var apiService = ApiService()
     private var statesListInfo = [States]()
     
-    func fetchgetStateinfo (completion: @escaping () -> ()) {
-        
+    func fetchgetStateinfo(completion: @escaping () -> ()) {
         apiService.getStateInfo { (result) in
             switch result {
             case .success(let listOf):

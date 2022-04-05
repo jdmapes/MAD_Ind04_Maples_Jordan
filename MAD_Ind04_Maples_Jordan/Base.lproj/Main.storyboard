@@ -15,6 +15,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xm2-h5-Kzd">
+                            <rect key="frame" x="0.0" y="110.5" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="My Table Cell" textLabel="pmg-YK-6hR" detailTextLabel="UGv-PZ-AYi" style="IBUITableViewCellStyleSubtitle" id="13Z-S6-4Gg">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
@@ -48,11 +55,12 @@
                     </tableView>
                     <connections>
                         <outlet property="tableViewController" destination="Bk1-yt-wie" id="pCY-yn-kta"/>
+                        <outlet property="testLabel" destination="Xm2-h5-Kzd" id="jWq-7C-yxq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUK-MH-FV9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-958" y="86"/>
+            <point key="canvasLocation" x="-572" y="82"/>
         </scene>
     </scenes>
     <resources>

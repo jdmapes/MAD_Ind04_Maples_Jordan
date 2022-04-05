@@ -9,6 +9,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
+    @IBOutlet weak var testLabel: UILabel!
     @IBOutlet var tableViewController: UITableView!
     
     var stateView = StateViewModel()
@@ -22,23 +23,23 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        apiService.getStateInfo { (result) in
-            print(result)
+        
+        self.stateView.fetchgetStateinfo(completion: self.tableViewController.reloadData)
     }
 
     // MARK: - Table view data source
 
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return stateView.numberOfRowsInSection(section: section)
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "My Table Cell", for: indexPath)
         cell.backgroundColor = UIColor(red: 1.0, green: 0.5, blue: 0, alpha: 1.0)
 
@@ -54,7 +55,7 @@ class TableViewController: UITableViewController {
 
         return cell
     }
-        
+ 
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -103,6 +104,6 @@ class TableViewController: UITableViewController {
 }
     
     
-}
+
 
 
