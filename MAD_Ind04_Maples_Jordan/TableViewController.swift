@@ -8,8 +8,7 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-    
-    @IBOutlet weak var testLabel: UILabel!
+
     @IBOutlet var tableViewController: UITableView!
     
     var stateView = StateViewModel()
@@ -41,7 +40,7 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "My Table Cell", for: indexPath)
-        cell.backgroundColor = UIColor(red: 1.0, green: 0.5, blue: 0, alpha: 1.0)
+//        cell.backgroundColor = UIColor(red: 1.0, green: 0.5, blue: 0, alpha: 1.0)
 
         // Grab data for the cell from the tuple
         let cellData = stateView.cellForRowAt(indexPath: indexPath)
