@@ -78,7 +78,7 @@ class ApiService {
         
         // Creating the URL Session
         dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            //Error handling
+            //Error handling and output message
             if let error = error {
                 completion(.failure(error))
                 print("Error in Datatask: \(error.localizedDescription)")
@@ -90,7 +90,7 @@ class ApiService {
                 print("Empty Response")
                 return
             }
-            
+            // Print Response code looking for 200 which is valid
             print("Response code: \(response.statusCode)")
             
             guard let data = data else {
