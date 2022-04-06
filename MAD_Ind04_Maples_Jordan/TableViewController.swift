@@ -118,7 +118,89 @@ struct States: Decodable {
         case nickname = "nickname"
     }
 }
+
+//API Call to parse the JSON structure
+class ApiService {
     
+    private var dataTask: URLSessionDataTask?
+    
+    func getStateInfo(completion: @escaping (Result<StatesResult, Error>) -> Void) {
+        
+        let statesInfoURL = "https://webmail.cs.okstate.edu/~mjordan/statescript.php"
+        
+        guard let url = URL(string: statesInfoURL) else {return}
+        
+        // Creating the URL Session
+        dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            //Error handling
+            if let error = error {
+                completion(.failure(error))
+                print("Error in Datatask: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse else {
+                // Empty Handling Response
+                print("Empty Response")
+                return
+            }
+            
+            print("Response code: \(response.statusCode)")
+            
+            guard let data = data else {
+                //Empty Data handling
+                print("Data is Empty")
+                
+                return
+            }
+            
+            do {
+                // Parse the data
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode(StatesResult.self, from: data)
+                
+                DispatchQueue.main.async {
+                    completion(.success(jsonData))
+                }
+                
+            } catch let error {
+                completion(.failure(error))
+            }
+        }
+        dataTask?.resume()
+    }
+}
+
+//Assigning the API return and verifying that stateinfoList returns 50 key:value pairs
+class StateViewModel {
+    
+    private var apiService = ApiService()
+    private var statesListInfo = [States]()
+    
+    func fetchgetStateinfo(completion: @escaping () -> ()) {
+        apiService.getStateInfo { (result) in
+            switch result {
+            case .success(let listOf):
+                self.statesListInfo = listOf.states
+                completion()
+            case .failure(let error):
+                print("JSON data parsing error: \(error)")
+            }
+        }
+    }
+    
+    func numberOfRowsInSection(section: Int) -> Int {
+        if statesListInfo.count != 0 {
+            return statesListInfo.count
+        }
+        return 0
+    }
+    
+    func cellForRowAt (indexPath: IndexPath) -> States {
+        return statesListInfo[indexPath.row]
+    }
+}
+
 
 
 
